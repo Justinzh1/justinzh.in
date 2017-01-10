@@ -1,0 +1,641 @@
+body {
+    width: 100%;
+    height: auto;
+    font-family: "Lato";
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: none;
+    color: #ff80ab;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 300ms ease-in;
+}
+
+a:hover {
+
+}
+
+a:visited {
+    /*color: #ff80ab;*/
+}
+
+.nav {
+    color: #1fbfac;
+    min-height: 60px;
+    height: 60px;
+    padding: 5px 20px;
+    background-color: white;
+    display: inline-block;
+    position: fixed;
+    z-index: 15;
+    width: 100%;
+    top: 0px;
+    opacity: 0.9;
+}
+
+#brand {
+    font-family: 'Playfair Display';
+    font-size: 20px;
+}
+
+#line {
+    color: black;
+}
+
+#carrot {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+#justin {
+    transition: 300ms;
+}
+
+#justin:before {
+    content: "justin zhong ";
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.nav p {
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.nav h1 {
+    color: black;
+    margin: 0;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.fab {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    position: relative;
+    right: 30px;
+    top: 10%;
+    float: right;
+    text-align: center;
+    transition: background-color 300ms ease-in;
+}
+
+.fab p {
+    top: 22.5px;
+    font-size: 25px;
+    transition: 300ms ease-out;
+}
+
+.fab:hover p {
+}
+
+.fab:hover {
+    background-color: white;
+    color: black;
+}
+
+.wrapper {
+    overflow: hidden;
+    /*height: calc(100vh);*/
+}
+
+.bg {
+    display: inline-block;
+    width: 500px;
+    height: auto;
+    position: relative;
+    bottom: 10vh;
+}
+
+.terminal {
+    width: auto;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    font-size: 24px;
+    font-weight: 300;
+    background-color: #191919;
+    color: #F5F5F5;
+    margin: 0 auto;
+    margin-top: 90px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.content p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.title {
+    padding-bottom: 10px;
+}
+
+.vertsubtitle {
+    height: 20px;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    transform: rotate(270deg);
+}
+
+.vertsubtitle p {
+    color: white;
+    font-weight: 300;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    display: inline-block;
+    position: relative;
+    left: -40px;
+    text-align: center;
+    width: 120px;
+    padding: 10px;
+}
+
+.subtitle p {
+    font-family: "lato";
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+.bars {
+    width: 235px;
+    height: 25px;
+    position: relative;
+    left: 50px;
+    top: -15px;
+    overflow-y: hidden;
+}
+
+.diag {
+    background-color: white;
+    display: inline-block;
+    margin-right: 5px;
+    height: 50px;
+    width: 10px;
+    transform: translateY(-5px) rotate(10deg);
+}
+
+.row {
+    padding: 30px;
+    padding-right: none;
+    background-color: #212121;
+    width: 100%;
+    min-height: 120px;
+    display: block;
+    text-align: left;
+    color: white;
+}
+
+.line {
+    width: 80%;
+    height: 8px;
+    background-color: #1fbfac;
+    display: block;
+    margin: 0 auto;
+}
+
+.bio {
+    height: 100%;
+    padding: 0 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: "lato";
+    font-size: 18px;
+    font-weight: 200;
+    /*background-image: url(../images/trees.png);*/
+    background-repeat: no-repeat;
+    background-position: 50% 120px;
+}
+
+.bio p {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 3;
+}
+
+#name {
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
+#tree {
+    position: relative;
+    transform: translateY(-150px);
+    display: block;
+    margin: 0 auto;
+    z-index: 1;
+    opacity: 1;
+}
+
+.desc {
+    box-shadow: white 0px 1.5px;
+}
+
+.bottom {
+    background-color: #26A69A;
+    height: 10px;
+    width: 800px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.pic {
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+    height: 48px;
+    width: 48px;
+    border: 4px white solid;
+    text-align: center;
+    transition: 300ms ease-in;
+    z-index: 10;
+}
+
+.pic p {
+    font-family: 'lato';
+    font-weight: 200;
+    font-size: 30px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-54%);
+}
+
+.pic:hover {
+    background-color: white;
+    color: #212121;
+    border-color: #212121;
+}
+
+.pic:hover p {
+    font-weight: 400;
+}
+
+.subcaption {
+    display: inline-block;
+    position: absolute;
+    transform: translateY(54px) translateX(5px);
+}
+
+.caption {
+    position: relative;
+    left: -102px;
+    top: 0px;
+    display: inline-block;
+}
+
+.caption p {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 36px;
+}
+
+.caption-title {
+    font-size: 24px;
+    position: relative;
+    top: -3px;
+}
+
+.date {
+    letter-spacing: .1em;
+    font-family: 'lato';
+    display: inline-block;
+    position: relative;
+    float: left;
+    left: -30px;
+    top: 36px;
+    font-size: 22px;
+    font-weight: 200;
+}
+
+#date-icon {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    left: -24px;
+    top: 46px;
+    color: white;
+    /*top: 50px;*/
+}
+
+#projects-bars {
+    width: 300px;
+}
+
+#contact-bars {
+    width: 400px;
+}
+
+.left {
+    display: block;
+    position: relative;
+    left: 60px;
+    text-align: left;
+}
+
+.left a {
+    transition: color 300ms ease-in;
+}
+
+.left a:hover {
+    color: #ff80ab;
+}
+
+.row-info {
+    text-align: left;
+    width: 80%;
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    left: -45px;
+}
+
+.description {
+    display: inline-block;
+    float: right;
+    position: relative;
+    top: 34px;
+    font-weight: 300;
+    font-size: 20px;
+    width: 325px;
+    padding-bottom: 30px;
+}
+
+.projects {
+    padding-bottom: 30px;
+}
+
+.mountains {
+    height: 100%;
+    /*padding: 0 30px;*/
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: "lato";
+    font-size: 18px;
+    font-weight: 200;
+    background-image: url(../images/mountains.png);
+    background-repeat: no-repeat;
+    background-position: 30% 100px;
+}
+
+.info {
+    position: relative;
+    left: -8px;
+    font-family: 'lato';
+    width: 100%;
+    padding: 30px;
+}
+
+.info a {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.info p {
+    margin: 10px;
+    font-size: 24px;
+}
+
+.left-icon {
+    margin-right: 10px;
+}
+
+.strikethrough {
+    position: relative;
+    /*color: #26A69A;*/
+}
+
+.strikethrough:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    transform: translateY(-0.65em);
+    border: -10px;
+    width: 0;
+    height: 6px;
+    background-color: #1fbfac;
+    opacity: 0.7;
+    content: '';
+    transition: width 0.2s;
+}
+
+.strikethrough:hover {
+
+}
+
+.strikethrough:hover:after {
+    width: 100%;
+}
+
+.contact {
+    margin-top: 60px;
+    font-weight: 300;
+}
+
+.footer {
+    padding: 50px;
+    color: white;
+    font-family: 'lato';
+    font-weight: 300;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.footer p {
+    display: inline-block;
+}
+
+.footer-bars {
+    color: black;
+    width: 100%;
+    height: 25px;
+    margin: 0 auto;
+    position: relative;
+    transform: translateY(-80%);
+    z-index: -1;
+    overflow-y: hidden;
+}
+
+.footer-bars>.hov{
+    background-color: white;
+}
+
+.footer-diag-left {
+    background-color: #1fbfac;
+    display: inline-block;
+    margin-right: 5px;
+    height: 50px;
+    width: 10px;
+    transform: translateY(-5px) rotate(20deg);
+}
+.footer-diag-right {
+    background-color: #1fbfac;
+    display: inline-block;
+    margin-right: 5px;
+    height: 50px;
+    width: 10px;
+    transform: translateY(-5px) rotate(-20deg);
+}
+
+.hov {
+    transition: 500ms ease-in;
+}
+
+.hov:hover {
+    background-color: #ff80ab;
+}
+
+.blank {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+}
+
+/* Strikethrough hover effect */
+@keyframes strikethrough {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+/* Typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 50% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #26A69A; }
+}
+
+@media (max-width: 600px) {
+    .pic {
+        display: block;
+    }
+    #justin:before {
+        content: "jz ";
+    }
+    .row-info {
+        width: 80%;
+        text-align: center;
+        left: 0;
+        top: 0px;
+    }
+    .date {
+        left: -16%;
+        top: 0;
+    }
+    .caption {
+        /*margin-left: 36px;*/
+        display: block;
+        top: 0;
+        left: -16.5%;
+    }
+    .description {
+        text-align: left;
+        width: 60%;
+    }
+}
+
+@media (max-width: 750px) {
+    .caption {
+        /*left: -42px;*/
+    }
+}
+
+@media (max-width: 800px) {
+    .row-info {
+        text-align: center;
+    }
+    .description {
+        text-align: left;
+        width: 300px;
+    }
+}
+
+@media (max-width: 320px) {
+    .bottom {
+        width: 320px;
+    }
+    .pic {
+        display: block;
+    }
+    #justin:before {
+        content: "jz ";
+    }
+    .subtitle p {
+        font-size: 40px;
+    }
+    #contact-bars {
+        width: 190px;
+    }
+    #projects-bars {
+        width: 200px;
+    }
+    .bars {
+        width: 150px;
+    }
+    .row-info {
+        width: 80%;
+        margin-left: -4px;
+        display: inline-block;
+        text-align: center;
+    }
+    .caption {
+        left: -42px;
+    }
+    .caption-title {
+        display: block;
+    }
+    .date {
+        left: 34px;
+    }
+    .description {
+        margin-left: 45px;
+        text-align: left;
+        width: 250px;
+    }
+}
+
+@media (max-width: 350px) {
+    .bottom {
+        width: 350px;
+    }
+}

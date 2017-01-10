@@ -1,0 +1,62 @@
+
+<html>
+  <head>
+    <title>EventBrite</title>
+    <link rel="stylesheet" href="assets/css/eventbrite.css">
+    <!-- Link to the needed stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+  <div class="eventbrite">
+    <div style="width: 400px" class="container">
+      <div class="page-header">
+          <h4>[DEPRECATED] Events Near Me <small>powered by eventbrite</small></h4>
+      </div>
+
+      <p style="font-size:12px; padding-top:5px;"><span class="fa fa-info-circle"></span> enter either a longitude and latitude or an address</p>
+
+      <div class="exact">
+        <div class="input-group">
+          <input id="longitude" type="text" class="form-control" placeholder="longitude">
+        </div>
+
+        <div class="input-group">
+          <input id="latitude" type="text" class="form-control" placeholder="latitude">
+        </div>
+
+        <div class="input-group">
+          <input id="address" type="text" class="form-control" placeholder="address">
+        </div>
+
+        <div class="buttons">
+          <button id="custom" class="btn btn-default" type="button">submit</button>
+
+          <button id="locate" data-toggle="tooltip" title="use my location" class="btn btn-default" type="button"><span class="glyphicon glyphicon-globe"></span></button>
+        </div>
+
+        <p style="font-size:12px">click the <span class="glyphicon glyphicon-globe"></span> to find your location </p>
+
+        <div id="alerts">
+          <span id="spinner" class=""></span>
+        </div>
+      </div>
+
+
+      <div id="now-header" class="page-header">
+
+      </div>
+      <div id="events-now">
+      </div>
+
+      <div id="later-header" class="page-header">
+      </div>
+      <div id="events-later">
+      </div>
+
+    </div>
+
+    <script src="assets/js/eventbrite.js"></script>
+  </div>
+  </body>

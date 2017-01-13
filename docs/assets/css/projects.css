@@ -18,6 +18,7 @@ figure {
 
 .projects-container {
     padding: 0 20px;
+    padding-bottom: 30px;
 }
 
 .card-bg {
@@ -224,7 +225,7 @@ figure {
     height: 100vh;
     width: 100vw;
     background-color: black;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .card-exit {
@@ -235,6 +236,10 @@ figure {
     color: white;
     transform: scale(1.1,1);
     transition: rotate 500ms;
+}
+
+.pics-container {
+    padding: 0 30px;
 }
 
 .x:hover {

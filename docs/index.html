@@ -15,8 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-    <script   src="https://code.jquery.com/jquery-3.1.1.slim.min.js"   integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="   crossorigin="anonymous"></script>
 
+    <script   src="https://code.jquery.com/jquery-3.1.1.slim.min.js"   integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="   crossorigin="anonymous"></script>
     <script src="assets/js/photoswipe.min.js"></script>
     <script src="assets/js/photoswipe-ui-default.min.js"></script>
     <script type='text/javascript' src="assets/js/gallery.js"></script>
@@ -121,7 +121,7 @@
                     </div>
                     <div class="toolbar">
                         <p><a class="card-link" href="https://github.com/Justinzh1/proj_hermione">link</a></p>
-                        <p id="hermione">info</p>
+                        <p id="hermione" class='info-button'>info</p>
                     </div>
                 </div>
             </div>
@@ -138,7 +138,7 @@
                     </div>
                     <div class="toolbar">
                         <p>link</p>
-                        <p>info</p>
+                        <p id="cpu" class='info-button'>info</p>
                     </div>
                 </div>
             </div>
@@ -155,7 +155,7 @@
                     </div>
                     <div class="toolbar">
                         <p><a class="card-link" href="https://github.com/Justinzh1/cyrcle_front_end">link</a></p>
-                        <p>info</p>
+                        <p class='info-button' id="cyrcle">info</p>
                     </div>
                 </div>
             </div>
@@ -172,7 +172,7 @@
                     </div>
                     <div class="toolbar">
                         <p>link</p>
-                        <p>info</p>
+                        <p class='info-button'>info</p>
                     </div>
                 </div>
             </div>
@@ -189,7 +189,7 @@
                     </div>
                     <div class="toolbar">
                         <p>link</p>
-                        <p>info</p>
+                        <p class='info-button'>info</p>
                     </div>
                 </div>
             </div>
@@ -206,7 +206,7 @@
                     </div>
                     <div class="toolbar">
                         <p><a class="card-link" href="http://justinzh1.github.io/Panel/">link</a></p>
-                        <p>info</p>
+                        <p class='info-button'>info</p>
                     </div>
                 </div>
             </div>
@@ -223,7 +223,7 @@
                     </div>
                     <div class="toolbar">
                         <p><a class="card-link" href="http://simplybecky.cloudapp.net">link</a></p>
-                        <p>info</p>
+                        <p class='info-button'>info</p>
                     </div>
                 </div>
             </div>
@@ -274,13 +274,18 @@
                         <div class="card-image-gallery">
                             <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
                               <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="http://placehold.it/300x200" itemprop="contentUrl" data-size="300x200" data-index="0">
-                                  <img src="http://placehold.it/300x200" height="200" width="300" itemprop="thumbnail" alt="Beach">
+                                <a href="assets/images/herm1.png" itemprop="contentUrl" data-size="700x500" data-index="0">
+                                  <img src="assets/images/herm1.png" height="200" width="300" itemprop="thumbnail" alt="Beach">
                                 </a>
                               </figure>
                               <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="http://placehold.it/300x200" itemprop="contentUrl" data-size="300x200" data-index="0">
-                                  <img src="http://placehold.it/300x200" height="200" width="300" itemprop="thumbnail" alt="Beach">
+                                <a href="assets/images/herm2.png" itemprop="contentUrl" data-size="700x500" data-index="0">
+                                  <img src="assets/images/herm2.png" height="200" width="300" itemprop="thumbnail" alt="Beach">
+                                </a>
+                              </figure>
+                              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="assets/images/herm3.png" itemprop="contentUrl" data-size="700x500" data-index="0">
+                                  <img src="assets/images/herm3.png" height="200" width="300" itemprop="thumbnail" alt="Beach">
                                 </a>
                               </figure>
                             </div>
@@ -288,13 +293,121 @@
                     </div>
                 </div>
 
+
                 <div class="card-info-bg">
                 </div>
             </div>
-        </div>
 
+            <div class="card-expand" id="cpu-info">
+                <div class="card-info">
+                    <div class="card-exit"><a href="" class="x">x</a></div>
+                    <h1>CPU</h1>
+                    <h2>Buildling a pipelined CPU in Logisim</h2>
+                    <div class="card-info-container">
+                        <p>In our largest project in my Computer Architecture class I was tasked with creating a
+                        fully functional CPU to support basic MIPS operations (R-type, I-type and J-type instructions)
+                        from scratch.
+                        </p>
+                        <br />
+                        <p>First I began by creating the regfile. Since I wanted to create a 32 bit machine, I created
+                        32 registers in the regfile module, making sure to link the clock to all of them and added three inputs
+                        on the left most side (rs, rt, rw), two switches on the bottom and 2 output links on the right side so
+                        the values could be processed by the ALU later.
+                        </p>
+                        <br />
+                        <p>Next, I set out to create a functional ALU to handle the basic ALU operations that include
+                        sll, srl, sra, mult, divu, add, addu, sub, subu, and, or, xor, nor, slt and sltu. In my design process I decided
+                        that the optimal solution would be to calculate the result for every possible operation since they run in parallel
+                        and then use a MUX to determine which final result to output. My ALU took in 3 values (x, y, and switch) and outputed
+                        4 values (overflow, equals, result_lo, and result_hi).</p>
+                        <br />
+                        <p>After implementing the ALU, I created the controller for the CPU, this functioned as a series of comparators
+                        to determine the opcode, func and immediate for each inputed command. Depending on the command it would activate specific
+                        indicators used to mark branching, sign extending, write to memory, etc. These commands were used in conjunction with MUX's
+                        to have the expected behavior of a normal CPU.</p>
+                        <br />
+                        <p>Additionally I used splitters to decode the instruction and a register directly before the decode process to create a
+                        simple 2-stage pipeline. To handle jumps and branches, I calculated the possible different values that the new PC could be
+                        after processing the command and used a MUX from the controller I made earlier to decide which value to use. Writing back to memory
+                        and registers was handled in a similar manner as well.
+                        </p>
+                    <br />
+                    <div class="card-image-gallery">
+                        <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
+                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="assets/images/cpu1.png" itemprop="contentUrl" data-size="548x1326" data-index="0">
+                              <img src="assets/images/cpu1.png" height="442" width="182" itemprop="thumbnail" alt="Beach">
+                            </a>
+                          </figure>
+                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="assets/images/cpu2.png" itemprop="contentUrl" data-size="588x578" data-index="0">
+                              <img src="assets/images/cpu2.png" height="196" width="200" itemprop="thumbnail" alt="Beach">
+                            </a>
+                          </figure>
+                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="assets/images/cpu3.png" itemprop="contentUrl" data-size="1355x857" data-index="0">
+                              <img src="assets/images/cpu3.png" height="268" width="418" itemprop="thumbnail" alt="Beach">
+                            </a>
+                          </figure>
+                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="assets/images/cpu4.png" itemprop="contentUrl" data-size="1258x1064" data-index="0">
+                              <img src="assets/images/cpu4.png" height="319" width="418" itemprop="thumbnail" alt="Beach">
+                            </a>
+                          </figure>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card-info-bg">
+                </div>
+            </div>
+
+            <div class="card-expand" id="cyrcle-info">
+                <div class="card-info">
+                    <div class="card-exit"><a href="" class="x">x</a></div>
+                    <h1>Cyrcle</h1>
+                    <h2>Front End Developement working with Algolia.js</h2>
+                    <div class="card-info-container">
+                        <p>Over the summer I teamed up with Berkeley club, CodeBase to work with a local San Francisco startup called Cyrcle.
+                           Cyrcle is an e-commerce startup with a focused on helping local small businesses get their products on the market
+                           as quickly and as easily as possible.
+                        </p>
+                        <br />
+                        <p>As the front end engineer, I set out to create a minimal product that emphasized the search component to highlight the
+                            fast speeds that Algolia.js provides. In addition to designing and building the entire front end, I was also responsible
+                            for creating filters to refine search results so users would get the information that they actually want.
+                        </p>
+                    <br />
+                    <div class="card-image-gallery">
+                        <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
+                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="assets/images/cyrcle1.png" itemprop="contentUrl" data-size="1920x1248" data-index="0">
+                              <img src="assets/images/cyrcle1.png" height="162" width="250" itemprop="thumbnail" alt="Beach">
+                            </a>
+                          </figure>
+                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="assets/images/cyrcle2.png" itemprop="contentUrl" data-size="1920x1248" data-index="0">
+                              <img src="assets/images/cyrcle2.png" height="162" width="250" itemprop="thumbnail" alt="Beach">
+                            </a>
+                          </figure>
+                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="assets/images/cyrcle3.png" itemprop="contentUrl" data-size="1920x1248" data-index="0">
+                              <img src="assets/images/cyrcle3.png" height="162" width="250" itemprop="thumbnail" alt="Beach">
+                            </a>
+                          </figure>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card-info-bg">
+                </div>
+            </div>
+
+        </div>
+        <div class="bottom"></div>
     </div>
-    <div class="bottom"></div>
 
     <div class="terminal projects">
         <div class="title">
@@ -318,6 +431,57 @@
                 <div class="diag"></div>
                 <div class="diag"></div>
                 <div class="diag"></div>
+            </div>
+        </div>
+        <div class="pics-container">
+            <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="assets/images/First Gen Front Final.jpg" itemprop="contentUrl" data-size="1080x1586" data-index="0">
+                  <img src="assets/images/First Gen Front Final.jpg" height="220" width="150" itemprop="thumbnail" alt="Beach">
+                </a>
+              </figure>
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="assets/images/First Gen Back Final.jpg" itemprop="contentUrl" data-size="1080x1586" data-index="0">
+                  <img src="assets/images/First Gen Back Final.jpg" height="220" width="150" itemprop="thumbnail" alt="Beach">
+                </a>
+              </figure>
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="assets/images/Survive the Night.jpg" itemprop="contentUrl" data-size="1080x1586" data-index="0">
+                  <img src="assets/images/Survive the Night.jpg" height="220" width="150" itemprop="thumbnail" alt="Beach">
+                </a>
+              </figure>
+              <br />
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="assets/images/um.png" itemprop="contentUrl" data-size="1024x768" data-index="0">
+                  <img src="assets/images/um.png" height="225" width="300" itemprop="thumbnail" alt="Beach">
+                </a>
+              </figure>
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="assets/images/osu.png" itemprop="contentUrl" data-size="1024x768" data-index="0">
+                  <img src="assets/images/osu.png" height="225" width="300" itemprop="thumbnail" alt="Beach">
+                </a>
+              </figure>
+              <br />
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="assets/images/Academic.png" itemprop="contentUrl" data-size="375x662" data-index="0">
+                  <img src="assets/images/Academic.png" height="264" width="150" itemprop="thumbnail" alt="Beach">
+                </a>
+              </figure>
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="assets/images/Class Alt - Day.png" itemprop="contentUrl" data-size="375x662" data-index="0">
+                  <img src="assets/images/Class Alt - Day.png" height="264" width="150" itemprop="thumbnail" alt="Beach">
+                </a>
+              </figure>
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="assets/images/Dining Page.png" itemprop="contentUrl" data-size="375x662" data-index="0">
+                  <img src="assets/images/Dining Page.png" height="264" width="150" itemprop="thumbnail" alt="Beach">
+                </a>
+              </figure>
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="assets/images/Study Spaces.png" itemprop="contentUrl" data-size="375x662" data-index="0">
+                  <img src="assets/images/Study Spaces.png" height="264" width="150" itemprop="thumbnail" alt="Beach">
+                </a>
+              </figure>
             </div>
         </div>
     </div>
@@ -395,10 +559,10 @@
             <div class="pswp__ui pswp__ui--hidden">
                 <div class="pswp__top-bar">
                     <div class="pswp__counter"></div>
-                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <!-- <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
                     <button class="pswp__button pswp__button--share" title="Share"></button>
                     <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button> -->
                     <div class="pswp__preloader">
                         <div class="pswp__preloader__icn">
                           <div class="pswp__preloader__cut">
@@ -407,7 +571,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <!-- <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
                     <div class="pswp__share-tooltip"></div>
                 </div>
                 <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
@@ -416,7 +580,7 @@
                 </button>
                 <div class="pswp__caption">
                     <div class="pswp__caption__center"></div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

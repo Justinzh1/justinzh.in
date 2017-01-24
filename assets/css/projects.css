@@ -182,13 +182,11 @@ figure {
     top: 110px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: black;
-    padding: 40px;
-    padding-top: 10px;
+    background-color: red;
     height: 490px;
     overflow: scroll;
     width: 720px;
-    /*padding-bottom: 80px;*/
+    padding: 40px 20px;
 }
 
 .card-info {

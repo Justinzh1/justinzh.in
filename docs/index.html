@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Justin Zhong</title>
+    <link rel="shortcut icon" href="assets/images/jz.png">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/scale.css">
     <link rel="stylesheet" href="assets/css/photoswipe.css">
@@ -172,7 +173,7 @@
                     </div>
                     <div class="toolbar">
                         <p>link</p>
-                        <p class='info-button'>info</p>
+                        <p class='info-button' id='bearmaps'>info</p>
                     </div>
                 </div>
             </div>
@@ -189,7 +190,7 @@
                     </div>
                     <div class="toolbar">
                         <p>link</p>
-                        <p class='info-button'>info</p>
+                        <p class='info-button' id='editor'>info</p>
                     </div>
                 </div>
             </div>
@@ -206,7 +207,6 @@
                     </div>
                     <div class="toolbar">
                         <p><a class="card-link" href="http://justinzh1.github.io/Panel/">link</a></p>
-                        <p class='info-button'>info</p>
                     </div>
                 </div>
             </div>
@@ -223,7 +223,7 @@
                     </div>
                     <div class="toolbar">
                         <p><a class="card-link" href="http://simplybecky.cloudapp.net">link</a></p>
-                        <p class='info-button'>info</p>
+                        <p class='info-button' id='simplybecky'>info</p>
                     </div>
                 </div>
             </div>
@@ -234,60 +234,57 @@
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="card-inside">
-                    <h1>COMING</h1>
-                </div>
-            </div>
-
-
             <div class="card-expand" id="hermione-info">
                 <div class="card-info">
                     <div class="card-exit"><a href="" class="x">x</a></div>
                     <h1>Hermione</h1>
                     <h2>Full Stack App built with the MEAN stack.</h2>
-                    <div class="card-info-container">
-                        <p>Hermione is a computer vision project that was created within the ASUC
-                        CTO division. It was created as a means to help professors record and post
-                        their lectures in an easily accessible manner. The site supports user authentication
-                        using a MongoDB database to allow professors to create new classes, post new videos,
-                        and manage students. Students on the otherhand have the ability to enroll in classes,
-                        and view classes. Hermione serves as a clean portal for students and professors
-                        record and review lectures at any time.</p>
-                        <br />
-                        <p>The front end is compiled using jade (now renamed to pug) to modularize components
-                        of web page. To handle user authentication I used the passport module in conjunction
-                        with a MongoDB database to serialize and hash user passwords to ensure security. Passport
-                        allows for authentication via Google accounts, which is important for ensuring that users
-                        are actually enrolled in the class and attend UC Berkeley. To connect to the database,
-                        I used mongoose to create respective collections to create class objects for storing
-                        links to the recorded lectures.</p>
-                        <br />
-                        <p>The front end is compiled using jade (now renamed to pug) to modularize components
-                        of web page. To handle user authentication I used the passport module in conjunction
-                        with a MongoDB database to serialize and hash user passwords to ensure security. Passport
-                        allows for authentication via Google accounts, which is important for ensuring that users
-                        are actually enrolled in the class and attend UC Berkeley. To connect to the database,
-                        I used mongoose to create respective collections to create class objects for storing
-                        links to the recorded lectures.</p>
-                        <br />
-                        <div class="card-image-gallery">
-                            <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
-                              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="assets/images/herm1.png" itemprop="contentUrl" data-size="700x500" data-index="0">
-                                  <img src="assets/images/herm1.png" height="200" width="300" itemprop="thumbnail" alt="Beach">
-                                </a>
-                              </figure>
-                              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="assets/images/herm2.png" itemprop="contentUrl" data-size="700x500" data-index="0">
-                                  <img src="assets/images/herm2.png" height="200" width="300" itemprop="thumbnail" alt="Beach">
-                                </a>
-                              </figure>
-                              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="assets/images/herm3.png" itemprop="contentUrl" data-size="700x500" data-index="0">
-                                  <img src="assets/images/herm3.png" height="200" width="300" itemprop="thumbnail" alt="Beach">
-                                </a>
-                              </figure>
+                    <div class="card-container-container">
+                        <div class="card-info-container">
+                            <p>Hermione is a computer vision project that was created within the ASUC
+                            CTO division. It was created as a means to help professors record and post
+                            their lectures in an easily accessible manner. The site supports user authentication
+                            using a MongoDB database to allow professors to create new classes, post new videos,
+                            and manage students. Students on the otherhand have the ability to enroll in classes,
+                            and view classes. Hermione serves as a clean portal for students and professors
+                            record and review lectures at any time.</p>
+                            <br />
+                            <p>The front end is compiled using jade (now renamed to pug) to modularize components
+                            of web page. To handle user authentication I used the passport module in conjunction
+                            with a MongoDB database to serialize and hash user passwords to ensure security. Passport
+                            allows for authentication via Google accounts, which is important for ensuring that users
+                            are actually enrolled in the class and attend UC Berkeley. To connect to the database,
+                            I used mongoose to create respective collections to create class objects for storing
+                            links to the recorded lectures.</p>
+                            <br />
+                            <p>The front end is compiled using jade (now renamed to pug) to modularize components
+                            of web page. To handle user authentication I used the passport module in conjunction
+                            with a MongoDB database to serialize and hash user passwords to ensure security. Passport
+                            allows for authentication via Google accounts, which is important for ensuring that users
+                            are actually enrolled in the class and attend UC Berkeley. To connect to the database,
+                            I used mongoose to create respective collections to create class objects for storing
+                            links to the recorded lectures.</p>
+                            <br />
+                            <p>The project itself is still in development so stay tuned as we continue to refine and add more features to the service. Current features in the works include: prefix-matching search through the videos that are time stamped so students can accurately and quickly find specific topics they are interested in learning more about.
+                            </p>
+                            <div class="card-image-gallery">
+                                <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
+                                  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="assets/images/herm1.png" itemprop="contentUrl" data-size="700x500" data-index="0">
+                                      <img src="assets/images/herm1.png" height="200" width="300" itemprop="thumbnail" alt="Beach">
+                                    </a>
+                                  </figure>
+                                  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="assets/images/herm2.png" itemprop="contentUrl" data-size="700x500" data-index="0">
+                                      <img src="assets/images/herm2.png" height="200" width="300" itemprop="thumbnail" alt="Beach">
+                                    </a>
+                                  </figure>
+                                  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="assets/images/herm3.png" itemprop="contentUrl" data-size="700x500" data-index="0">
+                                      <img src="assets/images/herm3.png" height="200" width="300" itemprop="thumbnail" alt="Beach">
+                                    </a>
+                                  </figure>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -303,59 +300,61 @@
                     <div class="card-exit"><a href="" class="x">x</a></div>
                     <h1>CPU</h1>
                     <h2>Buildling a pipelined CPU in Logisim</h2>
-                    <div class="card-info-container">
-                        <p>In our largest project in my Computer Architecture class I was tasked with creating a
-                        fully functional CPU to support basic MIPS operations (R-type, I-type and J-type instructions)
-                        from scratch.
-                        </p>
+                    <div class="card-container-container">
+                        <div class="card-info-container">
+                            <p>In our largest project in my Computer Architecture class I was tasked with creating a
+                            fully functional CPU to support basic MIPS operations (R-type, I-type and J-type instructions)
+                            from scratch.
+                            </p>
+                            <br />
+                            <p>First I began by creating the regfile. Since I wanted to create a 32 bit machine, I created
+                            32 registers in the regfile module, making sure to link the clock to all of them and added three inputs
+                            on the left most side (rs, rt, rw), two switches on the bottom and 2 output links on the right side so
+                            the values could be processed by the ALU later.
+                            </p>
+                            <br />
+                            <p>Next, I set out to create a functional ALU to handle the basic ALU operations that include
+                            sll, srl, sra, mult, divu, add, addu, sub, subu, and, or, xor, nor, slt and sltu. In my design process I decided
+                            that the optimal solution would be to calculate the result for every possible operation since they run in parallel
+                            and then use a MUX to determine which final result to output. My ALU took in 3 values (x, y, and switch) and outputed
+                            4 values (overflow, equals, result_lo, and result_hi).</p>
+                            <br />
+                            <p>After implementing the ALU, I created the controller for the CPU, this functioned as a series of comparators
+                            to determine the opcode, func and immediate for each inputed command. Depending on the command it would activate specific
+                            indicators used to mark branching, sign extending, write to memory, etc. These commands were used in conjunction with MUX's
+                            to have the expected behavior of a normal CPU.</p>
+                            <br />
+                            <p>Additionally I used splitters to decode the instruction and a register directly before the decode process to create a
+                            simple 2-stage pipeline. To handle jumps and branches, I calculated the possible different values that the new PC could be
+                            after processing the command and used a MUX from the controller I made earlier to decide which value to use. Writing back to memory
+                            and registers was handled in a similar manner as well.
+                            </p>
                         <br />
-                        <p>First I began by creating the regfile. Since I wanted to create a 32 bit machine, I created
-                        32 registers in the regfile module, making sure to link the clock to all of them and added three inputs
-                        on the left most side (rs, rt, rw), two switches on the bottom and 2 output links on the right side so
-                        the values could be processed by the ALU later.
-                        </p>
-                        <br />
-                        <p>Next, I set out to create a functional ALU to handle the basic ALU operations that include
-                        sll, srl, sra, mult, divu, add, addu, sub, subu, and, or, xor, nor, slt and sltu. In my design process I decided
-                        that the optimal solution would be to calculate the result for every possible operation since they run in parallel
-                        and then use a MUX to determine which final result to output. My ALU took in 3 values (x, y, and switch) and outputed
-                        4 values (overflow, equals, result_lo, and result_hi).</p>
-                        <br />
-                        <p>After implementing the ALU, I created the controller for the CPU, this functioned as a series of comparators
-                        to determine the opcode, func and immediate for each inputed command. Depending on the command it would activate specific
-                        indicators used to mark branching, sign extending, write to memory, etc. These commands were used in conjunction with MUX's
-                        to have the expected behavior of a normal CPU.</p>
-                        <br />
-                        <p>Additionally I used splitters to decode the instruction and a register directly before the decode process to create a
-                        simple 2-stage pipeline. To handle jumps and branches, I calculated the possible different values that the new PC could be
-                        after processing the command and used a MUX from the controller I made earlier to decide which value to use. Writing back to memory
-                        and registers was handled in a similar manner as well.
-                        </p>
-                    <br />
-                    <div class="card-image-gallery">
-                        <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
-                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="assets/images/cpu1.png" itemprop="contentUrl" data-size="548x1326" data-index="0">
-                              <img src="assets/images/cpu1.png" height="442" width="182" itemprop="thumbnail" alt="Beach">
-                            </a>
-                          </figure>
-                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="assets/images/cpu2.png" itemprop="contentUrl" data-size="588x578" data-index="0">
-                              <img src="assets/images/cpu2.png" height="196" width="200" itemprop="thumbnail" alt="Beach">
-                            </a>
-                          </figure>
-                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="assets/images/cpu3.png" itemprop="contentUrl" data-size="1355x857" data-index="0">
-                              <img src="assets/images/cpu3.png" height="268" width="418" itemprop="thumbnail" alt="Beach">
-                            </a>
-                          </figure>
-                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="assets/images/cpu4.png" itemprop="contentUrl" data-size="1258x1064" data-index="0">
-                              <img src="assets/images/cpu4.png" height="319" width="418" itemprop="thumbnail" alt="Beach">
-                            </a>
-                          </figure>
+                        <div class="card-image-gallery">
+                            <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
+                              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="assets/images/cpu1.png" itemprop="contentUrl" data-size="548x1326" data-index="0">
+                                  <img src="assets/images/cpu1.png" height="442" width="182" itemprop="thumbnail" alt="Beach">
+                                </a>
+                              </figure>
+                              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="assets/images/cpu2.png" itemprop="contentUrl" data-size="588x578" data-index="0">
+                                  <img src="assets/images/cpu2.png" height="196" width="200" itemprop="thumbnail" alt="Beach">
+                                </a>
+                              </figure>
+                              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="assets/images/cpu3.png" itemprop="contentUrl" data-size="1355x857" data-index="0">
+                                  <img src="assets/images/cpu3.png" height="268" width="418" itemprop="thumbnail" alt="Beach">
+                                </a>
+                              </figure>
+                              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="assets/images/cpu4.png" itemprop="contentUrl" data-size="1258x1064" data-index="0">
+                                  <img src="assets/images/cpu4.png" height="319" width="418" itemprop="thumbnail" alt="Beach">
+                                </a>
+                              </figure>
+                            </div>
                         </div>
-                    </div>
+                        </div>
                     </div>
                 </div>
 
@@ -368,36 +367,88 @@
                     <div class="card-exit"><a href="" class="x">x</a></div>
                     <h1>Cyrcle</h1>
                     <h2>Front End Developement working with Algolia.js</h2>
-                    <div class="card-info-container">
-                        <p>Over the summer I teamed up with Berkeley club, CodeBase to work with a local San Francisco startup called Cyrcle.
-                           Cyrcle is an e-commerce startup with a focused on helping local small businesses get their products on the market
-                           as quickly and as easily as possible.
-                        </p>
+                    <div class="card-container-container">
+                        <div class="card-info-container">
+                            <p>Over the summer I teamed up with Berkeley club, CodeBase to work with a local San Francisco startup called Cyrcle.
+                               Cyrcle is an e-commerce startup with a focused on helping local small businesses get their products on the market
+                               as quickly and as easily as possible.
+                            </p>
+                            <br />
+                            <p>As the front end engineer, I set out to create a minimal product that emphasized the search component to highlight the
+                                fast speeds that Algolia.js provides. In addition to designing and building the entire front end, I was also responsible
+                                for creating filters to refine search results so users would get the information that they actually want.
+                            </p>
                         <br />
-                        <p>As the front end engineer, I set out to create a minimal product that emphasized the search component to highlight the
-                            fast speeds that Algolia.js provides. In addition to designing and building the entire front end, I was also responsible
-                            for creating filters to refine search results so users would get the information that they actually want.
-                        </p>
-                    <br />
-                    <div class="card-image-gallery">
-                        <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
-                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="assets/images/cyrcle1.png" itemprop="contentUrl" data-size="1920x1248" data-index="0">
-                              <img src="assets/images/cyrcle1.png" height="162" width="250" itemprop="thumbnail" alt="Beach">
-                            </a>
-                          </figure>
-                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="assets/images/cyrcle2.png" itemprop="contentUrl" data-size="1920x1248" data-index="0">
-                              <img src="assets/images/cyrcle2.png" height="162" width="250" itemprop="thumbnail" alt="Beach">
-                            </a>
-                          </figure>
-                          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="assets/images/cyrcle3.png" itemprop="contentUrl" data-size="1920x1248" data-index="0">
-                              <img src="assets/images/cyrcle3.png" height="162" width="250" itemprop="thumbnail" alt="Beach">
-                            </a>
-                          </figure>
+                        <div class="card-image-gallery">
+                            <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
+                              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="assets/images/cyrcle1.png" itemprop="contentUrl" data-size="1920x1248" data-index="0">
+                                  <img src="assets/images/cyrcle1.png" height="162" width="250" itemprop="thumbnail" alt="Beach">
+                                </a>
+                              </figure>
+                              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="assets/images/cyrcle2.png" itemprop="contentUrl" data-size="1920x1248" data-index="0">
+                                  <img src="assets/images/cyrcle2.png" height="162" width="250" itemprop="thumbnail" alt="Beach">
+                                </a>
+                              </figure>
+                              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="assets/images/cyrcle3.png" itemprop="contentUrl" data-size="1920x1248" data-index="0">
+                                  <img src="assets/images/cyrcle3.png" height="162" width="250" itemprop="thumbnail" alt="Beach">
+                                </a>
+                              </figure>
+                            </div>
+                        </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="card-info-bg">
+                </div>
+            </div>
+
+            <div class="card-expand" id="bearmaps-info">
+                <div class="card-info">
+                    <div class="card-exit"><a href="" class="x">x</a></div>
+                    <h1>Bearmaps</h1>
+                    <h2>A*, Quadtrees, and Tries</h2>
+                    <div class="card-container-container">
+                        <div class="card-info-container">
+                            <p>In my final project for my data structures class, I set out to create our own version
+                               of Google Maps. To reinforce ideas of graphs, graph traversals, and quadtrees, we were
+                               tasked with coming up with our own implementations.
+                            </p>
+                            <br />
+                            <p>To collect the tiles used to piece together the quadtree, we used the open source project
+                                OpenMaps to collect images at various resolutions to support zooming in our application.
+                                By parsing the XML I was able to obtain the streets and connections needed to create a
+                                graph to represent the local Berkeley area.
+                            </p>
+                            <br />
+                            <p>Using the A* algorithm I was able to create a function that took in two points, finding the
+                               closest node for each respective point and using the graph to calculate the shortest path. To
+                               display the path, I overlayed the connection from node to node on top of the map to highlight <thead>
+                               path.
+                            </p>
+                            <br />
+                            <p>For more info you can read the <a href="http://datastructur.es/sp16/materials/proj/proj3/proj3.html"><strong>spec</strong></a> here! All in all it was a valuable project
+                               that helped me familiarize myself with modern applications of quadtrees and graphs. In the end we
+                               also learned how to deploy sites onto heroku and how a RESTful api works.</p>
+                        <br />
+                        <div class="card-image-gallery">
+                            <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
+                              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="assets/images/cyrcle1.png" itemprop="contentUrl" data-size="1920x1248" data-index="0">
+                                  <img src="assets/images/cyrcle1.png" height="162" width="250" itemprop="thumbnail" alt="Beach">
+                                </a>
+                              </figure>
+                              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="assets/images/cyrcle2.png" itemprop="contentUrl" data-size="1920x1248" data-index="0">
+                                  <img src="assets/images/cyrcle2.png" height="162" width="250" itemprop="thumbnail" alt="Beach">
+                                </a>
+                              </figure>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
 

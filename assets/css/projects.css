@@ -20,6 +20,10 @@ figure {
     padding: 0 20px;
 }
 
+.picture {
+    padding: 0px 30px;
+}
+
 .card-bg {
     left: -5px;
     top: -5px;
@@ -119,7 +123,7 @@ figure {
 
 .card-fab {
     background-color: white;
-    color: black;
+    color: white;
     height: 40px;
     width: 40px;
     border-radius: 100%;
@@ -135,9 +139,14 @@ figure {
     color: white;
 }
 
+.card-fab:hover + .toolbar p {
+    color: white;
+}
+
 .card-fab:hover + .toolbar a {
     color: white;
 }
+
 
 .toolbar:hover a {
     color: white;
@@ -154,16 +163,17 @@ figure {
 }
 
 .toolbar {
-    display: relative;
+    display: inline-block;
     transition: 500ms;
-    position: absolute;
-    bottom: -55%;
-    left: 70px;
-    color: black;
+    /*position: absolute;*/
+    /*bottom: -55%;*/
+    /*left: 70px;*/
+    margin: 0 auto;
+    color: white;
 }
 
 .toolbar a {
-    color: black;
+    color: white;
 }
 
 .toolbar p {

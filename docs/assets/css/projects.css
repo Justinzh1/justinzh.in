@@ -249,8 +249,16 @@ figure {
     transition: rotate 500ms;
 }
 
+figure {
+    background-color: white;
+}
+
 .pics-container {
-    padding: 0 30px;
+    padding: 30px 30px;
+}
+
+.picture {
+    padding: 20px 0px;
 }
 
 .x:hover {
